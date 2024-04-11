@@ -119,7 +119,7 @@ function questao7(){
 
     let distancia = Math.sqrt(Math.pow(diffX, 2) + Math.pow(diffY, 2));
 
-    alert(`A distância entre os pontos é: ${distancia}.`);
+    alert(`A distância entre os pontos é: ${distancia.toFixed(2)}.`);
 
 }
 
@@ -135,11 +135,19 @@ function questao8(){
 
 }
 
+// 9º) Escreva um programa que, informado o raio, calcule a área de um círculo A = πr2
+
+function questao9() {
+    let raio = parseFloat(prompt("Digite o raio do círculo: "))
+    let area = Math.PI * Math.pow(raio, 2);
+    alert(`A área do círculo é: ${area.toFixed(2)}.`)
+}
+
             //---------- STRINGS ----------//
 
-// 9º) Solicite duas palavras ao usuário e concatene. Exiba o resultado:
+// 10º) Solicite duas palavras ao usuário e concatene. Exiba o resultado:
 
-function questao9(){
+function questao10(){
 
     let palavra1 = prompt(`Digite a primeira palavra: `);
     let palavra2 = prompt(`Digite a sua segunda palavra: `);
@@ -150,9 +158,9 @@ function questao9(){
 
 }
 
-// 10º) Crie um programa que receba uma palavra e exiba cada letra separadamente.
+// 11º) Crie um programa que receba uma palavra e exiba cada letra separadamente.
 
-function questao10(){
+function questao11(){
 
     let palavra = prompt(`Digite uma palavra: `);
 
@@ -162,9 +170,9 @@ function questao10(){
 
 }
 
-// 11º) Crie um programa que receba um nome e verifique se o mesmo começa com a letra “A”:
+// 12º) Crie um programa que receba um nome e verifique se o mesmo começa com a letra “A”:
 
-function questao11(){
+function questao12(){
 
     let nome = prompt(`Digite um nome: `);
 
@@ -174,4 +182,41 @@ function questao11(){
         alert(`O nome não começa com a letra A.`)
     }
 
+}
+
+// 13º) Faça um programa que receba uma frase e exiba a quantidade de espaços em branco presentes na mesma.
+
+function questao13(){
+    let frase = prompt("Digite uma frase:");
+    let qntespacos = 0;
+
+    for (let i = 0; i < frase.length; i++) {
+        if (frase[i] === " ") {
+        qntespacos++;
+        }
+    }
+
+    alert(`A frase possui ${qntespacos} espaços em branco.`)
+}
+
+// 14º) 14) Crie um programa que leia uma palavra e exiba a quantidade de vogais presentes na mesma.
+
+function questao14() {
+    let palavra = prompt("Digite uma palavra: ")
+    palavra = palavra.toLowerCase();
+    let qntvogais = 0;
+
+    for (let i = 0; i < palavra.length; i++) {
+        let letra = palavra[i];
+
+        if (
+            letra === "a" ||
+            letra === "e" ||
+            letra === "i" ||
+            letra === "o" ||
+            letra === "u" 
+        ) {
+            qntvogais++;
+        }
+    }
 }
