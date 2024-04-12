@@ -335,3 +335,113 @@ function questao20(){
         alert(`A soma dos números não é divisível por 5.`)
     }
 }
+
+// 21º) Solicite duas notas, calcule a média, e informe se o aluno está aprovado ou reprovado.
+
+function questao21() {
+
+    let n1 = parseFloat(prompt("Digite sua primeira nota; "));
+    let n2 = parseFloat(prompt("Digite sua segunda nota: "));
+
+    let media = ( n1 + n2 ) / 2
+
+    if (media >= 6) {
+        alert(`Você foi aprovado com média ${media.toFixed(2)}, parabéns!`);
+    } else {
+        alert(`Você foi reprovado com média ${media.toFixed(2)}, tente novamente!`);
+    }
+}
+
+// 22º) Fala um programa que leia a idade de três pessoas e informe se alguma é maior de idade.
+
+function questao22() {
+    
+    let age1 = parseInt(prompt("Digite a idade da primeira pessoa: "));
+    let age2 = parseInt(prompt("Digite a idade da segunda pessoa: "));
+    let age3 = parseInt(prompt("Digite a idade da terceira pessoa: "));
+
+    if (age1 >= 18 && age2 >= 18 && age3 >= 18) {
+        alert("Todos são maiores de idade.")
+    } else if (age1 < 18 && age2 < 18 && age3 < 18) {
+        alert("Todos são menores de idade.")
+    } else {
+        alert("Uma ou duas pessoas são maiores de idade.")
+    }
+}
+
+// 23º) Fala um programa que leia a idade e informe se está apta a votar.
+
+function questao23() {
+
+    let idade = parseInt(prompt("Digite sua idade:"));
+
+    if (idade < 16) {
+        alert("Você não pode votar!")
+    } else if (idade >= 16 && idade <= 17 || idade >= 70) {
+        alert("Você pode votar mas não é obrigado(a).")
+    } else {
+        alert("Você pode e é obrigado a votar!")
+    }
+}
+
+// 24º) Solicite a idade e verifique.
+
+function questao24() {
+
+    let idade = parseInt(prompt("Digite sua idade:"));
+
+    if (idade >= 0 && idade <= 12) {
+        alert("Você é uma criança.");
+    } else if (idade >= 13 && idade <= 17) {
+        alert("Você é um adolescente.");
+    } else if (idade >= 18 && idade <= 59) {
+        alert("Você é um adulto.");
+    } else {
+        alert("Você é um idoso.");
+    }
+}
+
+// 25º) Verifique se um número é divisível por 3 e 5 ao mesmo tempo.
+
+function questao25() {
+
+    let num = parseInt(prompt("Digite um número inteiro:"));
+
+    if (num % 3 === 0 && num % 5 === 0) {
+        alert(`${num} é divisível por 3 e 5.`)
+    } else {
+        alert(`${num} não é divisível por 3 e 5 ao mesmo tempo.`)
+    }
+}
+
+            //---------- LAÇOS DE REPETIÇÃO ----------//
+
+// 26º) Exiba os números de 1 até 10.
+
+function questao26() {
+
+    let i = 1;
+    while (i <= 10) {
+        document.write(` ${i}`);
+        i++
+    }
+}
+
+// 27º) Exiba todos os números pares de 1 a 100.
+
+function questao27() {
+
+    for (let i = 2; i <= 100; i+= 2) {
+        document.write(` ${i}`);
+    }
+}
+
+// 28º) Escreva um programa que exiba a potência de um número informado pelo usuário.
+
+function questao28() {
+
+    let base = parseFloat(prompt("Digite o número base:"));
+    let expoente = parseInt(prompt("Digite o expoente:"));
+    let result = Math.pow(base, expoente);
+    alert(`${base} elevado a ${expoente} é: ${result}.`);
+}
