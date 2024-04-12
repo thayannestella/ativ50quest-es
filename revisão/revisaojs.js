@@ -158,6 +158,8 @@ function questao10(){
 
 }
 
+            //---------- LAÇOS DE REPETIÇÃO ----------//
+
 // 11º) Crie um programa que receba uma palavra e exiba cada letra separadamente.
 
 function questao11(){
@@ -199,14 +201,14 @@ function questao13(){
     alert(`A frase possui ${qntespacos} espaços em branco.`)
 }
 
-// 14º) 14) Crie um programa que leia uma palavra e exiba a quantidade de vogais presentes na mesma.
+// 14º) Crie um programa que leia uma palavra e exiba a quantidade de vogais presentes na mesma.
 
-function questao14() {
+function questao14(){
     let palavra = prompt("Digite uma palavra: ")
     palavra = palavra.toLowerCase();
     let qntvogais = 0;
 
-    for (let i = 0; i < palavra.length; i++) {
+    for (let i = 0; i < palavra.length; i++){
         let letra = palavra[i];
 
         if (
@@ -218,5 +220,118 @@ function questao14() {
         ) {
             qntvogais++;
         }
+    }
+}
+
+            //---------- CONDICIONAIS ----------//
+
+
+// 15º) Escreva um programa que solicite a idade e informe se ela é maior de idade ou não:
+
+function questao15(){
+
+    let idade = prompt(`Digite a idade: `);
+    if (idade >=  18){
+
+        alert(`Maior de idade.`)
+
+    }else{
+
+        alert(`Menor de idade.`)
+
+    }
+
+}
+
+// 16º) Escreva dois números e informe qual o maior:
+
+function questao16(){
+
+    let numero1 = prompt(`Digite o primeiro número: `);
+    let numero2 = prompt(`Digite o segundo número: `);
+
+    numero1 = parseFloat(numero1);
+    numero2 = parseFloat(numero2);
+
+    if (numero1 > numero2){
+        alert(`O primeiro número é maior: ${numero1}.`)
+    }else if (numero2 > numero1){
+        alert(`O segundo número é maior: ${numero2}.`)
+    }else{
+        alert(`Os números são iguais.`)
+    }
+
+}
+
+// 17º) Escreva três números e informe qual o maior:
+
+function questao17(){
+
+    let numero1 = prompt(`Digite o primeiro número: `)
+    let numero2 = prompt(`Digite o segundo número: `)
+    let numero3 = prompt(`Digite o terceiro número: `)
+
+    numero1 = parseFloat(numero1)
+    numero2 = parseFloat(numero2)
+    numero3 = parseFloat(numero3)
+
+    let maior = numero1;
+
+    if (numero2 > maior){
+        maior = numero2;
+    }
+    if (numero3 > maior){
+        maior = numero3
+    }
+
+    alert(`O maior número é: ${maior}.`)
+}
+
+// 18º) Faça um programa e informe se ele par ou ímpar:
+
+function questao18(){
+
+    let numero = prompt(`Digite um número: `)
+
+    numero = parseInt(numero)
+
+    if(numero % 2 === 0){
+        alert(`O número é par.`)
+    }else{
+        alert(`O número é ímpar.`)
+    }
+}
+
+// 19º) Faça um programa que informe se um número é positivo ou negativo:
+
+function questao19(){
+
+    let numero = prompt(`Digite um número: `);
+
+    numero = parseFloat(numero);
+
+    if (numero > 0){
+        alert(`O número é positivo.`);
+    }else if (numero < 0){
+        alert(`O número é negativo.`);
+    }else{
+        alert(`O número é zero.`)
+    }
+}
+
+// 20º) Faça um programa que leia três números e informe se a soma deles é divisível por 5:
+
+function questao20(){
+
+    let num1 = parseInt(prompt(`Digite o primeiro número: `))
+    let num2 = parseInt(prompt(`Digite o segundo número: `))
+    let num3 = parseInt(prompt(`Digite o terceiro número: `))
+
+    let soma = num1 + num2 + num3;
+
+    if (soma % 5 === 0){
+        alert(`A soma dos números é divisível por 5.`)
+    }else{
+        alert(`A soma dos números não é divisível por 5.`)
     }
 }
